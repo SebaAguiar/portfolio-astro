@@ -1,10 +1,10 @@
 import { defineConfig } from 'astro/config';
-import tailwind from "@astrojs/tailwind";
-import sitemap from "@astrojs/sitemap";
-import vercel from "@astrojs/vercel/serverless";
-
-import auth from "astro-auth";
-import db from "@astrojs/db";
+import tailwind from '@astrojs/tailwind';
+import sitemap from '@astrojs/sitemap';
+import vercel from '@astrojs/vercel/serverless';
+import db from '@astrojs/db';
+import auth from "auth-astro";
+import react from "@astrojs/react";
 
 // https://astro.build/config
 export default defineConfig({
@@ -12,7 +12,7 @@ export default defineConfig({
     defaultLocale: 'en',
     locales: ['en', 'es']
   },
-  integrations: [tailwind(), sitemap(), auth(), db()],
+  integrations: [tailwind(), sitemap(), db(), auth(), react()],
   output: 'server',
   adapter: vercel({
     webAnalytics: {

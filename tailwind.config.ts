@@ -1,13 +1,13 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
+  content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
   theme: {
     colors: {
-        black: '#232323',
-        green: '#55B481',
-        'side-gray': '#444444',
-        gray: '#BBBBBB',
-        white: '#FFFFFF',
+      black: '#232323',
+      green: '#55B481',
+      'side-gray': '#444444',
+      gray: '#BBBBBB',
+      white: '#FFFFFF',
     },
     extend: {
       textShadow: {
@@ -46,4 +46,4 @@ export default {
     require('tailwind-scrollbar-hide'),
     require('daisyui'),
   ],
-}
+};

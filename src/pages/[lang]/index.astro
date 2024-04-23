@@ -2,12 +2,10 @@
 import Layout from '../../layouts/Layout.astro';
 
 export const getStaticPahs = async () => {
-  return [
-    { params: { lang: 'es' } },
-    { params: { lang: 'en' } }
-  ]
-} 
+	return [{ params: { lang: 'es' } }, { params: { lang: 'en' } }];
+};
 ---
+
 <Layout title='hola'>
-  <h1>Hola</h1>
+	<h1>Hola</h1>
 </Layout>
