@@ -10,10 +10,14 @@ export const ui = {
 		'nav.home': 'Home',
 		'nav.about': 'About',
 		'nav.twitter': 'Twitter',
+		'middle.work': 'Backend Developer',
+		'middle.download': 'Download CV',
 	},
 	es: {
 		'nav.home': 'Inicio',
 		'nav.about': 'Sobre Mi',
 		'nav.twitter': 'Twitter',
+		'middle.work': 'Desarrollador Backend',
+		'middle.download': 'Descargar CV',
 	},
 } as const;

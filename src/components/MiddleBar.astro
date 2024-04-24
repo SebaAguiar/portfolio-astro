@@ -1,5 +1,10 @@
 ---
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+import DownloadCv from './DownloadCv';
+import SocialMedia from './SocialMedia';
 
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <>
@@ -13,19 +18,21 @@
 				alt='Seba Image'
 			/>
 		</div>
-		<div class='flex max-h-40 flex-col flex-wrap items-center justify-center'>
-			<h1 class='text-center text-3xl font-bold text-white'>
-				Sebastian Aguiar
-			</h1>
-			<h2 class='text-center text-lg font-semibold text-gray'>
-				Backend Developer
-			</h2>
+		<div class='flex h-44 flex-col flex-wrap items-center justify-around'>
+			<div class=''>
+				<h1 class='text-center text-3xl font-bold text-white'>
+					Sebastian Aguiar
+				</h1>
+				<h2 class='text-center text-lg font-semibold text-gray'>
+					{t('middle.work')}
+				</h2>
+			</div>
 			<div class='w-10/12 md:w-full'>
-				<!-- <SocialMedia /> -->
+				<SocialMedia />
 			</div>
 		</div>
 		<div class='flex w-full items-center justify-center'>
-			<!-- <DownloadCv /> -->
+			<DownloadCv text={t('middle.download')} />
 		</div>
 		<div class='h-2 w-full'></div>
 	</div>
