@@ -1,6 +1,6 @@
 ---
 import { ViewTransitions } from 'astro:transitions';
-import BurguerMenu from '../components/BurguerMenu.astro';
+import BurguerMenu from '../components/BurguerMenu.tsx';
 import SideBar from '../components/containers/SideBar.astro';
 import { getLangFromUrl } from '../i18n/utils';
 
@@ -24,12 +24,13 @@ const lang = getLangFromUrl(Astro.url);
 		<title>{title}</title>
 	</head>
 	<body class='flex h-screen w-screen flex-row overflow-hidden bg-black'>
-		<BurguerMenu />
+		<BurguerMenu client:only='react' />
 		<SideBar />
 		<slot />
-	</body><style is:global>
-		@tailwind base;
-		@tailwind components;
-		@tailwind utilities;
-	</style>
+		<style is:global>
+			@tailwind base;
+			@tailwind components;
+			@tailwind utilities;
+		</style>
+	</body>
 </html>

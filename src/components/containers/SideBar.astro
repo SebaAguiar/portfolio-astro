@@ -20,9 +20,9 @@ const lang = getLangFromUrl(Astro.url);
 	// Listen to changes in the store, and show/hide the dialog accordingly
 	isOpen.subscribe((open) => {
 		if (open) {
-			side?.classList.add('-translate-x-full'); // Mueve hacia la izquierda
+			side?.classList.remove('-translate-x-full'); // Mueve hacia la izquierda
 		} else {
-			side?.classList.remove('-translate-x-full'); // Vuelve a la posición original
+			side?.classList.add('-translate-x-full'); // Vuelve a la posición original
 		}
 	});
 </script>
