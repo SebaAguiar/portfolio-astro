@@ -1,6 +1,6 @@
 ---
 import { ViewTransitions } from 'astro:transitions';
-import BurguerMenu from '../components/BurguerMenu.tsx';
+import BurgerMenu from '../components/BurgerMenu';
 import SideBar from '../components/containers/SideBar.astro';
 import { getLangFromUrl } from '../i18n/utils';
 
@@ -24,7 +24,9 @@ const lang = getLangFromUrl(Astro.url);
 		<title>{title}</title>
 	</head>
 	<body class='flex h-screen w-screen flex-row overflow-hidden bg-black'>
-		<BurguerMenu client:only='react' />
+		<div id='burger' class='fixed right-3 top-3 size-max lg:hidden'>
+			<BurgerMenu client:only='react' />
+		</div>
 		<SideBar />
 		<slot />
 		<style is:global>
@@ -32,5 +34,16 @@ const lang = getLangFromUrl(Astro.url);
 			@tailwind components;
 			@tailwind utilities;
 		</style>
+		<script>
+			import { isOpen } from '../nanostores/store';
+			isOpen.subscribe((open) => {
+				const burger = document.getElementById('burger');
+				if (open) {
+					burger?.classList.add('hidden'); // Mueve hacia la izquierda
+				} else {
+					burger?.classList.remove('hidden'); // Vuelve a la posición original
+				}
+			});
+		</script>
 	</body>
 </html>
