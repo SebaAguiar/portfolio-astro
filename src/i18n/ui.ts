@@ -12,6 +12,8 @@ export const ui = {
 		'nav.twitter': 'Twitter',
 		'middle.work': 'Backend Developer',
 		'middle.download': 'Download CV',
+		'about.title': 'About Me',
+		'about.whatIDo': 'What I Do',
 	},
 	es: {
 		'nav.home': 'Inicio',
@@ -19,5 +21,7 @@ export const ui = {
 		'nav.twitter': 'Twitter',
 		'middle.work': 'Desarrollador Backend',
 		'middle.download': 'Descargar CV',
+		'about.title': 'Sobre Mi',
+		'about.whatIDo': 'Que Hago',
 	},
 } as const;

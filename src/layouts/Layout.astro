@@ -23,7 +23,9 @@ const lang = getLangFromUrl(Astro.url);
 		<ViewTransitions />
 		<title>{title}</title>
 	</head>
-	<body class='flex h-screen w-screen flex-row overflow-hidden bg-black'>
+	<body
+		class='flex h-screen w-screen flex-row overflow-hidden bg-black text-white'
+	>
 		<div id='burger' class='fixed right-3 top-3 size-max lg:hidden'>
 			<BurgerMenu client:only='react' />
 		</div>

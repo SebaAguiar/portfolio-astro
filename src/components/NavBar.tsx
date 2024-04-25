@@ -1,11 +1,13 @@
 import React from 'react';
 import { LuHome, LuUser, LuFileText, LuMail } from 'react-icons/lu';
+import styles from '../styles/navbar.module.css';
 
 interface INavBarProps {
 	lang: string;
+	path: string;
 }
 
-const NavBar: React.FC<INavBarProps> = ({ lang }) => {
+const NavBar: React.FC<INavBarProps> = ({ lang, path }) => {
 	const pages = [
 		{
 			name: {
@@ -40,7 +42,6 @@ const NavBar: React.FC<INavBarProps> = ({ lang }) => {
 			icon: <LuMail />,
 		},
 	];
-
 	return (
 		<>
 			<nav className='h-full w-2/12 border-r border-side-gray bg-black'>
@@ -48,6 +49,7 @@ const NavBar: React.FC<INavBarProps> = ({ lang }) => {
 					{pages.map((page) => (
 						<>
 							<a
+								id={`/${lang}${path}` === page.path ? styles.navActive : ''}
 								className={`flex h-1/4 w-full items-center justify-center border-b border-b-side-gray text-4xl duration-300`}
 								href={page.path}
 							>
