@@ -23,3 +23,7 @@ export const dateFormater = (date: string, lang: string, options: object) => {
 	const birth = newDate.toLocaleDateString(locales, options);
 	return birth;
 };
+
+export const capitalizeFirstLetter = (word: string) => {
+	return word.charAt(0).toUpperCase() + word.slice(1);
+};

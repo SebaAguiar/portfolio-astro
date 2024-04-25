@@ -1,0 +1,41 @@
+---
+import { capitalizeFirstLetter, dateFormater } from '../i18n/utils';
+import styles from '../styles/experience.module.css';
+import type { IExperience } from '../types';
+const options = {
+	year: 'numeric',
+	month: 'short',
+};
+
+const { experience, title, lang } = Astro.props;
+---
+
+<section class='mr-2'>
+	<h2 class='ml-8 mt-1 text-2xl font-semibold text-green'>
+		{title}
+	</h2>
+	<ol class='relative ml-3 mt-6 border-s border-green lg:ml-6'>
+		{
+			experience?.map((exp: IExperience) => (
+				<li class='mb-10 ml-3 ms-4 lg:ml-6'>
+					<div
+						id={styles.timelineDot}
+						class='absolute -start-1.5 mt-1.5 h-3 w-3 rounded-full border border-green bg-green'
+					/>
+					<p class='text-xs text-white'>
+						{capitalizeFirstLetter(
+							dateFormater(exp?.from ?? '', lang, options),
+						)}{' '}
+						-{' '}
+						{capitalizeFirstLetter(dateFormater(exp?.to ?? '', lang, options))}
+					</p>
+					<h3 class='text-xl font-bold text-white'>{exp.title}</h3>
+					<a class='w-15' href={exp.companyUrl}>
+						<h4 class='w-max text-xs font-light text-white'>{exp.company}</h4>
+					</a>
+					<p class='mt-2 text-white'>{exp.description}</p>
+				</li>
+			))
+		}
+	</ol>
+</section>

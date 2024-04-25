@@ -14,6 +14,9 @@ export const ui = {
 		'middle.download': 'Download CV',
 		'about.title': 'About Me',
 		'about.whatIDo': 'What I Do',
+		'resume.title': 'Resume',
+		'resume.work.title': 'Work Experience',
+		'resume.formation.title': 'Formation',
 	},
 	es: {
 		'nav.home': 'Inicio',
@@ -23,5 +26,8 @@ export const ui = {
 		'middle.download': 'Descargar CV',
 		'about.title': 'Sobre Mi',
 		'about.whatIDo': 'Que Hago',
+		'resume.title': 'Currículum',
+		'resume.work.title': 'Experiencia de Trabajo',
+		'resume.formation.title': 'Formación',
 	},
 } as const;

@@ -1,0 +1,25 @@
+---
+import { formationData } from '../../constants/formation';
+import { workExpData } from '../../constants/workExp';
+import { getLangFromUrl, useTranslations } from '../../i18n/utils';
+import Experience from '../Experience.astro';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<main>
+	<h1 class='text-dark-white ml-3 mt-3 text-4xl font-bold'>
+		{t('resume.title')}
+	</h1>
+	<Experience
+		title={t('resume.work.title')}
+		lang={lang}
+		experience={workExpData[lang]}
+	/>
+	<Experience
+		title={t('resume.formation.title')}
+		lang={lang}
+		experience={formationData[lang]}
+	/>
+</main>
