@@ -1,14 +1,24 @@
 ---
 import { formationData } from '../../constants/formation';
+import { skillsData } from '../../constants/skills';
 import { workExpData } from '../../constants/workExp';
 import { getLangFromUrl, useTranslations } from '../../i18n/utils';
 import Experience from '../Experience.astro';
+import Skill from '../Skill.astro';
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
+const skillNames: (
+	| 'database'
+	| 'programming'
+	| 'backend'
+	| 'frontend'
+	| 'styling'
+	| 'tool'
+)[] = ['database', 'programming', 'backend', 'frontend', 'styling', 'tool'];
 ---
 
-<main>
+<main class='w-full overflow-auto'>
 	<h1 class='text-dark-white ml-3 mt-3 text-4xl font-bold'>
 		{t('resume.title')}
 	</h1>
@@ -22,4 +32,20 @@ const t = useTranslations(lang);
 		lang={lang}
 		experience={formationData[lang]}
 	/>
+	<div class='w-full'>
+		<h2 class='ml-8 mt-1 text-2xl font-semibold text-green'>
+			{t('resume.skill.title')}
+		</h2>
+		<section class='flex w-full flex-col'>
+			<div
+				class='mt-2 flex w-full flex-row flex-wrap items-center justify-center text-center'
+			>
+				{
+					skillNames.map((skill) => (
+						<Skill skill={skillsData[skill as keyof typeof skillsData]} />
+					))
+				}
+			</div>
+		</section>
+	</div>
 </main>

@@ -7,3 +7,8 @@ export interface IExperience {
 	description: string;
 	certificateUrl?: string;
 }
+
+export interface ISkill {
+	name?: string;
+	image?: string;
+}

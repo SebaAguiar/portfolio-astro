@@ -17,6 +17,7 @@ export const ui = {
 		'resume.title': 'Resume',
 		'resume.work.title': 'Work Experience',
 		'resume.formation.title': 'Formation',
+		'resume.skill.title': 'Tech Skills',
 	},
 	es: {
 		'nav.home': 'Inicio',
@@ -29,5 +30,6 @@ export const ui = {
 		'resume.title': 'Currículum',
 		'resume.work.title': 'Experiencia de Trabajo',
 		'resume.formation.title': 'Formación',
+		'resume.skill.title': 'Habilidades Técnicas',
 	},
 } as const;

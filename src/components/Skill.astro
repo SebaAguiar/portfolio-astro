@@ -1,0 +1,25 @@
+---
+import styles from '../styles/skills.module.css';
+import type { ISkill } from '../types';
+const { skill } = Astro.props;
+---
+
+{
+	skill.map((s: ISkill) => (
+		<div class='group m-1 flex h-max w-max flex-col items-center justify-center'>
+			<img
+				id={styles.skillImage}
+				class='text-dark-white m-2 h-14 w-14 lg:m-4'
+				src={s.image}
+				alt={s.name}
+			/>
+			<p
+				id={styles.skillName}
+				class='group-hover:text-dark-white text-center  text-transparent transition-all duration-500'
+				style={{ height: '1em' }}
+			>
+				{s.name}
+			</p>
+		</div>
+	))
+}
