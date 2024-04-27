@@ -1,4 +1,4 @@
-import { dateFormater } from '../i18n/utils';
+import { dateFormater } from '../utils/utils';
 
 const options = {
 	year: 'numeric',

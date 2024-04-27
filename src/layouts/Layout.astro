@@ -2,7 +2,7 @@
 import { ViewTransitions } from 'astro:transitions';
 import BurgerMenu from '../components/BurgerMenu';
 import SideBar from '../components/containers/SideBar.astro';
-import { getLangFromUrl } from '../i18n/utils';
+import { getLangFromUrl } from '../utils/utils';
 
 interface Props {
 	title: string;
@@ -30,9 +30,7 @@ const lang = getLangFromUrl(Astro.url);
 			<BurgerMenu client:only='react' />
 		</div>
 		<SideBar />
-		<!-- <div class='h-screen w-screen lg:w-2/3'> -->
 		<slot />
-		<!-- </div> -->
 		<style is:global>
 			@tailwind base;
 			@tailwind components;

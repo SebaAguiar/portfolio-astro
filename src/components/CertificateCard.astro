@@ -1,0 +1,22 @@
+---
+import type { ICertificate } from '../types';
+const { certificates } = Astro.props;
+---
+
+<section class='flex w-full flex-row flex-wrap justify-around'>
+	{
+		certificates.map((cert: ICertificate) => (
+			<a href={cert.image}>
+				<div class='bg-dark card card-side m-3 h-52 w-96 border border-side-gray shadow-xl'>
+					<figure class='h-full w-1/3'>
+						<img class='h-full w-full' src={cert.image} alt={cert.name} />
+					</figure>
+					<div class='card-body flex h-full w-2/3 items-center justify-center'>
+						<h2 class='card-title text-center text-xl'>{cert.name}</h2>
+						<p>{cert.company}</p>
+					</div>
+				</div>
+			</a>
+		))
+	}
+</section>

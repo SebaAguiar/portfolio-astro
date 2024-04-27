@@ -1,5 +1,5 @@
 ---
-import { getLangFromUrl, getPathFromUrl } from '../../i18n/utils';
+import { getLangFromUrl, getPathFromUrl } from '../../utils/utils';
 import BurgerMenu from '../BurgerMenu';
 import MiddleBar from '../MiddleBar.astro';
 import NavBar from '../NavBar';
@@ -19,13 +19,11 @@ const path = getPathFromUrl(Astro.url, lang);
 <script>
 	import { isOpen } from '../../nanostores/store';
 	const side = document.getElementById('sidebar');
-
-	// Listen to changes in the store, and show/hide the dialog accordingly
 	isOpen.subscribe((open) => {
 		if (open) {
-			side?.classList.remove('-translate-x-full'); // Mueve hacia la izquierda
+			side?.classList.remove('-translate-x-full');
 		} else {
-			side?.classList.add('-translate-x-full'); // Vuelve a la posición original
+			side?.classList.add('-translate-x-full');
 		}
 	});
 </script>

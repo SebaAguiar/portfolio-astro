@@ -1,12 +1,12 @@
 ---
 import { aboutMeData } from '../../constants/about';
-import { getLangFromUrl, useTranslations } from '../../i18n/utils';
+import { getLangFromUrl, useTranslations } from '../../utils/utils';
 import WhatIDo from '../WhatIDo';
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
 
-<main>
+<main class='h-full w-2/3'>
 	<h1 class='ml-3 mt-3 text-4xl font-bold'>{t('about.title')}</h1>
 	<div class='flex w-full flex-col justify-center md:flex-row'>
 		<div class='m-4 ml-8 flex w-11/12 items-center justify-center md:w-8/12'>

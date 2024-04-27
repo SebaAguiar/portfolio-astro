@@ -9,6 +9,16 @@ export interface IExperience {
 }
 
 export interface ISkill {
-	name?: string;
-	image?: string;
+	name: string;
+	image: string;
+}
+
+export interface ICertificate {
+	name: string;
+	image: string;
+	company: string;
+	companyUrl: string;
+	certificateUrl: string;
+	aptitudes: string[];
+	date: '';
 }

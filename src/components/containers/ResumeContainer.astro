@@ -1,10 +1,14 @@
 ---
+import { certificatesData } from '../../constants/certificates';
 import { formationData } from '../../constants/formation';
 import { skillsData } from '../../constants/skills';
 import { workExpData } from '../../constants/workExp';
-import { getLangFromUrl, useTranslations } from '../../i18n/utils';
+import { getLangFromUrl, useTranslations } from '../../utils/utils';
+import CertificateCard from '../CertificateCard.astro';
 import Experience from '../Experience.astro';
+import OtherCertificates from '../OtherCertificates.astro';
 import Skill from '../Skill.astro';
+import Header2 from './Header2.astro';
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
@@ -16,9 +20,11 @@ const skillNames: (
 	| 'styling'
 	| 'tool'
 )[] = ['database', 'programming', 'backend', 'frontend', 'styling', 'tool'];
+const firstFour = certificatesData.slice(0, 4);
+const theRest = certificatesData.slice(4);
 ---
 
-<main class='w-full overflow-auto'>
+<main class='w-full overflow-auto lg:w-2/3'>
 	<h1 class='text-dark-white ml-3 mt-3 text-4xl font-bold'>
 		{t('resume.title')}
 	</h1>
@@ -33,9 +39,9 @@ const skillNames: (
 		experience={formationData[lang]}
 	/>
 	<div class='w-full'>
-		<h2 class='ml-8 mt-1 text-2xl font-semibold text-green'>
+		<Header2>
 			{t('resume.skill.title')}
-		</h2>
+		</Header2>
 		<section class='flex w-full flex-col'>
 			<div
 				class='mt-2 flex w-full flex-row flex-wrap items-center justify-center text-center'
@@ -47,5 +53,17 @@ const skillNames: (
 				}
 			</div>
 		</section>
+	</div>
+	<div class='h-max w-full'>
+		<Header2>
+			{t('resume.certificate.title')}
+		</Header2>
+		<CertificateCard certificates={firstFour} />
+	</div>
+	<div class='h-max w-full'>
+		<Header2>
+			{t('resume.otherCertificate.title')}
+		</Header2>
+		<OtherCertificates certificates={theRest} />
 	</div>
 </main>

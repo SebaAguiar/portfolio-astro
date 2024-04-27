@@ -1,7 +1,8 @@
 ---
-import { capitalizeFirstLetter, dateFormater } from '../i18n/utils';
 import styles from '../styles/experience.module.css';
 import type { IExperience } from '../types';
+import { capitalizeFirstLetter, dateFormater } from '../utils/utils';
+import Header2 from './containers/Header2.astro';
 const options = {
 	year: 'numeric',
 	month: 'short',
@@ -10,10 +11,10 @@ const options = {
 const { experience, title, lang } = Astro.props;
 ---
 
-<section class='mr-2'>
-	<h2 class='ml-8 mt-1 text-2xl font-semibold text-green'>
+<section class='mr-2 w-full'>
+	<Header2>
 		{title}
-	</h2>
+	</Header2>
 	<ol class='relative ml-3 mt-6 border-s border-green lg:ml-6'>
 		{
 			experience?.map((exp: IExperience) => (
