@@ -1,6 +1,6 @@
 export const certificatesData = [
 	{
-		name: 'Arquitectura de software: De desarrollador a arquitecto o arquitecta',
+		name: 'Arq. de software: De desarrollador a arquitecto o arquitecta',
 		company: 'LinkedIn Learning',
 		companyUrl: 'https://es.linkedin.com/learning/',
 		image:
@@ -24,7 +24,7 @@ export const certificatesData = [
 		date: '2023-03-02',
 	},
 	{
-		name: 'Arquitectura de Software: Patrones esencial',
+		name: 'Arq. de Software: Patrones esencial',
 		company: 'LinkedIn Learning',
 		companyUrl: 'https://es.linkedin.com/learning/',
 		image:
@@ -57,7 +57,7 @@ export const certificatesData = [
 		date: '2023-01-04',
 	},
 	{
-		name: 'Arquitectura de software: Diseño de sistemas de software esencial',
+		name: 'Arq. de software: Diseño de sistemas de software esencial',
 		company: 'LinkedIn Learning',
 		companyUrl: 'https://es.linkedin.com/learning/',
 		image:

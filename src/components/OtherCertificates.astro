@@ -4,13 +4,11 @@ import type { ICertificate } from '../types';
 const { certificates } = Astro.props;
 ---
 
-<section class='mb-4 ml-12 h-max w-full'>
+<section class='mb-4 ml-6 h-max w-full'>
 	{
 		certificates.map((certificate: ICertificate) => (
 			<a class='w-100' href={certificate.image}>
-				<p class='w-max text-xl'>
-					{certificate.name} - <strong>{certificate.company}</strong>
-				</p>
+				<p class='w-max text-lg'>{certificate.name}</p>
 			</a>
 		))
 	}

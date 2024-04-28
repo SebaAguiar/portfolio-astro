@@ -24,13 +24,17 @@ const lang = getLangFromUrl(Astro.url);
 		<title>{title}</title>
 	</head>
 	<body
-		class='flex h-screen w-screen flex-row overflow-hidden bg-black text-white'
+		class='grid h-screen w-screen grid-cols-10 grid-rows-5 overflow-auto bg-black'
 	>
 		<div id='burger' class='fixed right-3 top-3 size-max lg:hidden'>
 			<BurgerMenu client:only='react' />
 		</div>
 		<SideBar />
-		<slot />
+		<article
+			class='col-start-1 col-end-11 row-start-1 row-end-6 w-full overflow-auto overflow-x-hidden lg:col-start-4'
+		>
+			<slot />
+		</article>
 		<style is:global>
 			@tailwind base;
 			@tailwind components;

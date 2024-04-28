@@ -11,14 +11,14 @@ const options = {
 const { experience, title, lang } = Astro.props;
 ---
 
-<section class='mr-2 w-full'>
+<section class='mr-2'>
 	<Header2>
 		{title}
 	</Header2>
 	<ol class='relative ml-3 mt-6 border-s border-green lg:ml-6'>
 		{
 			experience?.map((exp: IExperience) => (
-				<li class='mb-10 ml-3 ms-4 lg:ml-6'>
+				<li class='mb-10 ml-3 ms-4 w-full max-w-[800px] pr-6 lg:ml-6 lg:pr-10'>
 					<div
 						id={styles.timelineDot}
 						class='absolute -start-1.5 mt-1.5 h-3 w-3 rounded-full border border-green bg-green'

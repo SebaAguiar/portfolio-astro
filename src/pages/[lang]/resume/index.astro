@@ -1,6 +1,9 @@
 ---
 import ResumeContainer from '../../../components/containers/ResumeContainer.astro';
 import Layout from '../../../layouts/Layout.astro';
+export const getStaticPahs = async () => {
+	return [{ params: { lang: 'es' } }, { params: { lang: 'en' } }];
+};
 ---
 
 <Layout title='resume'>

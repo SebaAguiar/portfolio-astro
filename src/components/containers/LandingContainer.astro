@@ -1,0 +1,17 @@
+---
+import { getLangFromUrl, useTranslations } from '../../utils/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<>
+	<div class='flex flex-col flex-wrap items-center justify-center'>
+		<h1 class='h-max text-4xl font-bold text-white md:text-6xl lg:text-7xl'>
+			Sebastian <span class='text-green'>Aguiar</span>
+		</h1>
+		<h2 class='h-max text-2xl font-bold text-gray md:text-3xl lg:text-4xl'>
+			{t('middle.work')}
+		</h2>
+	</div>
+</>
