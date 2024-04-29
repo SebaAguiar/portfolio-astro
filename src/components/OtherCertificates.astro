@@ -4,12 +4,18 @@ import type { ICertificate } from '../types';
 const { certificates } = Astro.props;
 ---
 
-<section class='mb-4 ml-6 h-max w-full'>
-	{
-		certificates.map((certificate: ICertificate) => (
-			<a class='w-100' href={certificate.image}>
-				<p class='w-max text-lg'>{certificate.name}</p>
-			</a>
-		))
-	}
-</section>
+<div class='flex w-full items-center justify-center'>
+	<div
+		class='bg-dark card card-side m-3 h-44 w-72 max-w-[800px] self-center overflow-y-auto border border-side-gray shadow-xl md:h-52 md:w-[600px] lg:h-max lg:w-full'
+	>
+		<ul class='h-max w-full list-disc py-4 pl-8 pr-14'>
+			{
+				certificates.map((certificate: ICertificate) => (
+					<a class='w-100' href={certificate.image}>
+						<li class='mr-4 w-max text-lg'>{certificate.name}</li>
+					</a>
+				))
+			}
+		</ul>
+	</div>
+</div>
