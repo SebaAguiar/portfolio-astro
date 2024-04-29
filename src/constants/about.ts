@@ -17,14 +17,14 @@ export const aboutMeData = {
 		residence: 'Entre Rios, Argentina',
 		whatIDo: [
 			{
-				title: 'Web Development',
+				title: 'Desarrollo Web',
 				description:
-					'As a full-stack web developer I create complete websites, from their backend to their frontend. I have the ability to adapt to user needs and provide functional, attractive, and accessible web solutions.',
+					'Como desarrollador web full-stack creo sitios web completos, desde el backend hasta el frontend. Tengo la capacidad de adaptarme a las necesidades de los usuarios y brindar soluciones web funcionales, atractivas y accesibles.',
 			},
 			{
-				title: 'Backend web Development',
+				title: 'Desarrollo Backend',
 				description:
-					'As a backend web developer I can create robust APIs to connect various services and applications. I handle the logic, security, and performance of the websites I develop.',
+					'Como desarrollador web backend, puedo crear API sólidas para conectar varios servicios y aplicaciones. Manejo la lógica, la seguridad y el rendimiento de los sitios web que desarrollo.',
 			},
 		],
 	},
@@ -38,14 +38,14 @@ export const aboutMeData = {
 		residence: 'Entre Rios, Argentina',
 		whatIDo: [
 			{
-				title: 'Desarrollo Web',
+				title: 'Web Development',
 				description:
-					'Como desarrollador web full-stack creo sitios web completos, desde el backend hasta el frontend. Tengo la capacidad de adaptarme a las necesidades de los usuarios y brindar soluciones web funcionales, atractivas y accesibles.',
+					'As a full-stack web developer I create complete websites, from their backend to their frontend. I have the ability to adapt to user needs and provide functional, attractive, and accessible web solutions.',
 			},
 			{
-				title: 'Desarrollo Backend',
+				title: 'Backend web Development',
 				description:
-					'Como desarrollador web backend, puedo crear API sólidas para conectar varios servicios y aplicaciones. Manejo la lógica, la seguridad y el rendimiento de los sitios web que desarrollo.',
+					'As a backend web developer I can create robust APIs to connect various services and applications. I handle the logic, security, and performance of the websites I develop.',
 			},
 		],
 	},

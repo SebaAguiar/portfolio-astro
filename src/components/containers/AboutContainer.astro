@@ -2,11 +2,12 @@
 import { aboutMeData } from '../../constants/about';
 import { getLangFromUrl, useTranslations } from '../../utils/utils';
 import WhatIDo from '../WhatIDo';
+import Header2 from './Header2.astro';
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
 
-<main class='h-full w-2/3'>
+<main class='h-full w-full'>
 	<h1 class='ml-3 mt-3 text-4xl font-bold'>{t('about.title')}</h1>
 	<div class='flex w-full flex-col justify-center md:flex-row'>
 		<div class='m-4 ml-8 flex w-11/12 items-center justify-center md:w-8/12'>
@@ -34,11 +35,11 @@ const t = useTranslations(lang);
 		</div>
 	</div>
 	<div>
-		<h2 class='text-dark-green ml-8 mt-4 text-2xl font-semibold'>
+		<Header2>
 			{t('about.whatIDo')}
-		</h2>
+		</Header2>
 		<div
-			class='text-dark-white flex w-full flex-col items-center justify-center md:flex-row md:justify-around'
+			class='flex w-full flex-row flex-wrap items-center justify-center md:justify-around'
 		>
 			<WhatIDo data={aboutMeData[lang].whatIDo} />
 		</div>
