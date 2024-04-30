@@ -45,9 +45,57 @@ const ContactForm: React.FC<IContactFormProps> = ({ lang }) => {
 	};
 
 	return (
-		<>
-			<div>ContactForm</div>
-		</>
+		<section className='flex w-full flex-col items-center justify-center md:w-2/3'>
+			<h2 className='mt-1 text-2xl font-semibold text-green'>
+				{t('form.title')}
+			</h2>
+			<form
+				className='text-dark-white flex w-full flex-col items-center justify-center font-light'
+				ref={form}
+				onSubmit={sendForm}
+			>
+				<div className='flex w-2/3 flex-col-reverse'>
+					<input
+						// id={styles.contactInput}
+						className='bg-dark-black border-dark-white focus:border-dark-white mb-2 mt-2 rounded-md border-2'
+						name='user_email'
+						type='email'
+						required
+					/>
+					<label htmlFor='user_email'>Email:</label>
+				</div>
+				<div className='flex w-2/3 flex-col-reverse'>
+					<input
+						// id={styles.contactInput}
+						className='bg-dark-black border-dark-white focus:border-dark-white mb-2 mt-2 rounded-md border-2'
+						name='user_fullname'
+						type='text'
+						required
+					/>
+					<label htmlFor='fullname'>Full Name:</label>
+				</div>
+				<div className='flex w-2/3 flex-col-reverse'>
+					<input
+						// id={styles.contactInput}
+						className='bg-dark-black border-dark-white focus:border-dark-white mb-2 mt-2 rounded-md border-2'
+						name='user_subject'
+						type='text'
+						required
+					/>
+					<label htmlFor='user_subject'>Subject:</label>
+				</div>
+				<div className='flex w-2/3 flex-col-reverse'>
+					<textarea
+						// id={styles.contactInput}
+						className='bg-dark-black border-dark-white focus:border-dark-white mb-2 mt-2 rounded-md border-2'
+						style={{ resize: 'vertical', maxHeight: '150px' }}
+						name='user_message'
+						required
+					/>
+					<label htmlFor='user_message'>Message:</label>
+				</div>
+			</form>
+		</section>
 	);
 };
 

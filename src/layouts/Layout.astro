@@ -24,14 +24,14 @@ const lang = getLangFromUrl(Astro.url);
 		<title>{title}</title>
 	</head>
 	<body
-		class='grid h-screen w-screen grid-cols-10 grid-rows-5 overflow-auto bg-black text-white'
+		class='grid h-screen w-screen grid-cols-10 grid-rows-5 overflow-auto bg-black text-white lg:grid-cols-12'
 	>
 		<div id='burger' class='fixed right-3 top-3 size-max lg:hidden'>
 			<BurgerMenu client:only='react' />
 		</div>
 		<SideBar />
 		<article
-			class='col-start-1 col-end-11 row-start-1 row-end-6 w-full overflow-auto overflow-x-hidden lg:col-start-4'
+			class='col-start-1 col-end-11 row-start-1 row-end-6 w-full overflow-auto overflow-x-hidden lg:col-start-4 lg:col-end-13'
 		>
 			<slot />
 		</article>

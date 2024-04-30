@@ -1,4 +1,5 @@
 ---
+import ContactContainer from '../../../components/containers/ContactContainer.astro';
 import Layout from '../../../layouts/Layout.astro';
 export const getStaticPahs = async () => {
 	return [{ params: { lang: 'es' } }, { params: { lang: 'en' } }];
@@ -6,5 +7,5 @@ export const getStaticPahs = async () => {
 ---
 
 <Layout title='contact'>
-	<h1>contact</h1>
+	<ContactContainer />
 </Layout>
