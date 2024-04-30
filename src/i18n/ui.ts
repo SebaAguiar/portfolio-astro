@@ -20,6 +20,10 @@ export const ui = {
 		'resume.skill.title': 'Tech Skills',
 		'resume.certificate.title': 'My Certificates',
 		'resume.otherCertificate.title': 'Other Certificates',
+		'contact.title': 'Contact',
+		'contact.message.success':
+			'Thank you for contacting me, I will answer as soon as possible.',
+		'error.message': 'Sorry... there is an error, please try again',
 	},
 	es: {
 		'nav.home': 'Inicio',
@@ -35,5 +39,9 @@ export const ui = {
 		'resume.skill.title': 'Habilidades Técnicas',
 		'resume.certificate.title': 'Mis Certificados',
 		'resume.otherCertificate.title': 'Otros Certificados',
+		'contact.title': 'Contacto',
+		'error.message': 'Sorry... there is an error, please try again',
+		'contact.message.success':
+			'Gracias por contactarme, le respondere tan pronto sea posible',
 	},
 } as const;

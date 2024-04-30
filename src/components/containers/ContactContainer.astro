@@ -1,0 +1,11 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { getLangFromUrl, useTranslations } from '../../utils/utils';
+import ContactForm from '../ContactForm';
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<Layout title={t('contact.title')}>
+	<ContactForm lang={lang} client:only />
+</Layout>

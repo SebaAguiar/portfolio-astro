@@ -1,0 +1,5 @@
+export const {
+	PUBLIC_EMAIL_JS_SERVICE_ID,
+	PUBLIC_EMAIL_JS_TEMPLATE_ID,
+	PUBLIC_EMAIL_JS_PUBLIC_KEY,
+} = import.meta.env;
